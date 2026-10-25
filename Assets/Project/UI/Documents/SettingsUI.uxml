@@ -1,0 +1,25 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Project/UI/Styles/Settings.uss?fileID=7433441132597879392&amp;guid=affa4eb024d7f4743bf1c6c357c6b8e0&amp;type=3#Settings"/>
+    <ui:Image source="project://database/Assets/Project/Textures/Sprites/Table.png?fileID=2800000&amp;guid=423d67d5e97476242a58ec12a92f1259&amp;type=3#Table" style="height: 100%; align-items: center; justify-content: flex-start;">
+        <ui:Image source="project://database/Assets/Project/Textures/Sprites/Buttons/Header.png?fileID=2800000&amp;guid=6884aa2c03de6a940b6ed22da78c067d&amp;type=3#Header" style="margin-top: 40px; margin-bottom: 40px;"/>
+        <ui:TabView style="height: 72%; width: 783px; justify-content: flex-start;">
+            <ui:Tab label="Gráficos" name="graphics-tab" style="-unity-background-image-tint-color: rgb(255, 255, 255); height: 225px;">
+                <ui:DropdownField label="Calidad" name="quality-drop" choices="Muy bajo,Bajo,Medio,Alto,Muy alto,Ultra" index="0"/>
+                <ui:DropdownField label="FPS" choices="30,60,Sin límite" index="0" name="fps-drop"/>
+                <ui:DropdownField label="Modo pantalla" name="screen-drop" choices="Pantalla completa,Ventana sin bordes,Ventana" index="0" style="justify-content: space-evenly; align-self: stretch;"/>
+            </ui:Tab>
+            <ui:Tab label="Audio" name="music-tab">
+                <ui:Slider label="Música" value="42" high-value="80" name="music-slider">
+                    <ui:Button name="muteMusic-button" style="background-image: url(&quot;project://database/Assets/Project/Textures/Sprites/Buttons/BTNs/Sound_BTN.png?fileID=2800000&amp;guid=65f3d98e917a3164797a71d69cd06df0&amp;type=3#Sound_BTN&quot;); -unity-background-scale-mode: scale-to-fit; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-color: rgba(188, 188, 188, 0); width: 5%;"/>
+                </ui:Slider>
+                <ui:Slider label="SFX" value="42" high-value="80" name="sfx-slider">
+                    <ui:Button name="muteSFX-button" style="background-image: url(&quot;project://database/Assets/Project/Textures/Sprites/Buttons/BTNs/Sound_BTN.png?fileID=2800000&amp;guid=65f3d98e917a3164797a71d69cd06df0&amp;type=3#Sound_BTN&quot;); -unity-background-scale-mode: scale-to-fit; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-color: rgba(188, 188, 188, 0); width: 5%;"/>
+                </ui:Slider>
+            </ui:Tab>
+            <ui:Tab label="Controles" name="controls-tab">
+                <ui:Toggle label="Invertir eje Y" name="inverse-toggle"/>
+            </ui:Tab>
+        </ui:TabView>
+        <ui:Button name="exit-button" style="align-self: center; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/Project/Textures/Sprites/Buttons/BTNs/Close_BTN.png?fileID=2800000&amp;guid=0d764b44ae0436f4c8605d1ad68acbbc&amp;type=3#Close_BTN&quot;); background-color: rgba(188, 188, 188, 0); width: 6%; height: 10%;"/>
+    </ui:Image>
+</ui:UXML>

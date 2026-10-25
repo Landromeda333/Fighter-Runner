@@ -1,0 +1,27 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Image source="project://database/Assets/Project/Textures/Sprites/Table.png?fileID=2800000&amp;guid=423d67d5e97476242a58ec12a92f1259&amp;type=3#Table" style="height: 100%; align-items: center; justify-content: space-evenly;">
+        <ui:Label text="Fin de partida" name="gameOver-text" style="font-size: 90px; color: rgb(255, 255, 255); -unity-font-style: bold;"/>
+        <ui:GroupBox style="flex-direction: row; justify-content: space-around; width: 40.7%;">
+            <ui:GroupBox style="align-items: center;">
+                <ui:Label text="Mejor puntuación" name="highscore-title" style="color: rgb(255, 255, 255); font-size: 40px; -unity-font-style: bold;"/>
+                <ui:Label text="0" name="highscore-text" style="font-size: 20px; color: rgb(255, 255, 255);"/>
+            </ui:GroupBox>
+            <ui:GroupBox style="align-items: center;">
+                <ui:Label text="Mejor tiempo" name="highTime-title" style="color: rgb(255, 255, 255); font-size: 40px; -unity-font-style: bold;"/>
+                <ui:Label text="0" name="highTime-text" style="font-size: 20px; color: rgb(255, 255, 255);"/>
+            </ui:GroupBox>
+        </ui:GroupBox>
+        <ui:GroupBox style="flex-direction: row; width: 40.7%; justify-content: space-around;">
+            <ui:GroupBox style="align-items: center;">
+                <ui:Label text="Puntuación" name="score-title" style="color: rgb(255, 255, 255); font-size: 40px;"/>
+                <ui:Label text="0" name="score-text" style="color: rgb(255, 255, 255); font-size: 20px;"/>
+            </ui:GroupBox>
+            <ui:GroupBox style="align-items: center;">
+                <ui:Label text="Tiempo" name="time-title" style="color: rgb(255, 255, 255); font-size: 40px;"/>
+                <ui:Label text="0" name="time-text" style="color: rgb(255, 255, 255); font-size: 20px;"/>
+            </ui:GroupBox>
+        </ui:GroupBox>
+        <ui:Button name="restart-button" style="background-image: url(&quot;project://database/Assets/Project/Textures/Sprites/Buttons/BTNs/Replay_BTN.png?fileID=2800000&amp;guid=bf8d57eddd524224ba1d2ab4afa72d07&amp;type=3#Replay_BTN&quot;); -unity-background-scale-mode: scale-to-fit; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-color: rgba(188, 188, 188, 0); height: 10%; width: 6%;"/>
+        <ui:Button name="exit-button" text="Salir" style="background-image: url(&quot;project://database/Assets/Project/Textures/Sprites/Price_BTN_Table.png?fileID=2800000&amp;guid=2ff3705282dfb314a965bb8485f3018d&amp;type=3#Price_BTN_Table&quot;); background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; color: rgb(255, 255, 255); -unity-font-style: bold; width: 12%; -unity-background-scale-mode: scale-to-fit; height: 10%; font-size: 40px; padding-top: 0;"/>
+    </ui:Image>
+</ui:UXML>

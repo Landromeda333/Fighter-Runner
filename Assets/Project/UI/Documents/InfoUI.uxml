@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Image source="project://database/Assets/Project/Textures/Sprites/Window.png?fileID=2800000&amp;guid=d7895abf68d679844a018fe5a9ec904e&amp;type=3#Window" style="height: 100%; align-items: center;">
+        <ui:Label text="Información" style="color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 100px; -unity-text-align: middle-center; height: 18%;"/>
+        <ui:VisualElement style="height: 60%; width: 60%; align-items: flex-start; margin-top: 30px;">
+            <ui:Label text="Cabeceo: W - S" name="pitch-text" style="color: rgb(255, 255, 255); font-size: 35px; margin-bottom: 20px; -unity-font-style: bold;"/>
+            <ui:Label text="Alabeo: A - D" name="warp-text" style="font-size: 35px; color: rgb(255, 255, 255); margin-bottom: 20px; -unity-font-style: bold;"/>
+            <ui:Label text="Guiñada: Q - E" name="yaw-text" style="font-size: 35px; color: rgb(255, 255, 255); margin-bottom: 20px; -unity-font-style: bold;"/>
+            <ui:Label text="Disparo: Espacio" name="shoot-text" style="font-size: 35px; color: rgb(255, 255, 255); margin-bottom: 20px; -unity-font-style: bold;"/>
+            <ui:Label text="Lanzamiento misiles: F" name="missile-text" style="font-size: 35px; color: rgb(255, 255, 255); height: 51px; margin-bottom: 20px; -unity-font-style: bold;"/>
+            <ui:Label text="El avión está equipado con una alarma que alerta cuando se está a baja altura" name="warning-text" style="font-size: 35px; -unity-text-align: middle-left; color: rgb(255, 255, 255); margin-bottom: 20px; white-space: normal; -unity-font-style: bold;"/>
+        </ui:VisualElement>
+        <ui:Button name="exit-button" style="position: relative; background-image: url(&quot;project://database/Assets/Project/Textures/Sprites/Buttons/BTNs/Close_BTN.png?fileID=2800000&amp;guid=0d764b44ae0436f4c8605d1ad68acbbc&amp;type=3#Close_BTN&quot;); background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; -unity-background-scale-mode: scale-to-fit; width: 7%; height: 12%; align-self: center;"/>
+    </ui:Image>
+</ui:UXML>

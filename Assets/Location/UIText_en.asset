@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UIText_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 4d22df14ceaa0524fb43c28ac89c4c8c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1235738435584
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1231648989184
+    m_Localized: Information
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1224384454656
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1238351486976
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1240926789632
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38164978737152
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44061230637056
+    m_Localized: Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44223592144896
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86233195749376
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86319799738368
+    m_Localized: Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86413081059328
+    m_Localized: Highscore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86527799468032
+    m_Localized: Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97759034089472
+    m_Localized: 'Warning
+
+      Pull up'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100852559781888
+    m_Localized: Information
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101734982623232
+    m_Localized: How to play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101844554620928
+    m_Localized: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 394989817307136
+    m_Localized: The plane is equipped with an alarm that alerts when it is at low
+      altitude
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395145040109568
+    m_Localized: 'Missile launch: F'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395284098064384
+    m_Localized: 'Fire: Space Bar'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395473173094400
+    m_Localized: 'Yaw: Q - E'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395602378629120
+    m_Localized: 'Warp: A - D'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395753604259840
+    m_Localized: 'Pitch: W - S'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

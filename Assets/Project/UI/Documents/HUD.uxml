@@ -1,0 +1,19 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:GroupBox style="flex-direction: row; justify-content: space-between; height: 14%; margin-top: 1%;">
+        <ui:Image source="project://database/Assets/Project/Textures/Sprites/Price_BTN_Table.png?fileID=2800000&amp;guid=2ff3705282dfb314a965bb8485f3018d&amp;type=3#Price_BTN_Table" style="-unity-background-scale-mode: scale-to-fit; width: 20%; height: 100%;">
+            <ui:Label text="0" name="score-text" style="color: rgb(255, 255, 255); height: 85%; -unity-text-align: middle-center; font-size: 70px; padding-top: 0; -unity-font-style: bold;"/>
+        </ui:Image>
+        <ui:GroupBox style="flex-direction: row;">
+            <ui:Label text="Velocidad:" name="speed-text" style="-unity-text-align: middle-center; font-size: 70px; color: rgb(255, 255, 255); -unity-font-style: bold;"/>
+            <ui:Label text="0%" name="speedNum-text" style="-unity-text-align: middle-center; font-size: 70px; color: rgb(255, 255, 255); -unity-font-style: bold;"/>
+        </ui:GroupBox>
+        <ui:Image source="project://database/Assets/Project/Textures/Sprites/Price_BTN_Table.png?fileID=2800000&amp;guid=2ff3705282dfb314a965bb8485f3018d&amp;type=3#Price_BTN_Table" style="-unity-background-scale-mode: scale-to-fit; width: 20%; height: 100%;">
+            <ui:Label text="00:00" name="time-text" style="-unity-text-align: middle-center; padding-top: 0; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 70px; height: 85%; align-self: center; padding-right: 0; margin-right: 0; padding-left: 1%;"/>
+        </ui:Image>
+    </ui:GroupBox>
+    <ui:Label text="Peligro&#10;Sube" name="warning-text" style="color: rgb(200, 59, 59); -unity-font-style: bold; font-size: 74px; -unity-text-align: middle-center; height: 30%; display: none;"/>
+    <ui:Button text="Empezar&#10;" name="start-button" style="position: absolute; bottom: 0%; align-self: center; background-image: url(&quot;project://database/Assets/Project/Textures/Sprites/Price_BTN_Table.png?fileID=2800000&amp;guid=2ff3705282dfb314a965bb8485f3018d&amp;type=3#Price_BTN_Table&quot;); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; -unity-background-scale-mode: scale-to-fit; background-color: rgba(188, 188, 188, 0); color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-align: lower-center; width: 23%; height: 14%; font-size: 47px; padding-bottom: 0;"/>
+    <ui:Image name="crosshair1-image" source="project://database/Resources/unity_builtin_extra?fileID=10912&amp;guid=0000000000000000f000000000000000&amp;type=0#Knob" style="position: absolute; top: 37%; left: 49.4%; width: 1%;"/>
+    <ui:Image name="crosshair2-image" source="project://database/Resources/unity_builtin_extra?fileID=10912&amp;guid=0000000000000000f000000000000000&amp;type=0#Knob" style="position: absolute; top: 49%; left: 49.4%; width: 1%; display: none;"/>
+    <ui:Image name="crosshair3-image" source="project://database/Resources/unity_builtin_extra?fileID=10912&amp;guid=0000000000000000f000000000000000&amp;type=0#Knob" style="position: absolute; top: 49%; left: 49.4%; width: 1%; display: none;"/>
+</ui:UXML>

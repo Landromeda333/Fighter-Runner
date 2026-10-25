@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UIText Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: UIText
+  m_TableCollectionNameGuidString: 4d22df14ceaa0524fb43c28ac89c4c8c
+  m_Entries:
+  - m_Id: 44061230637056
+    m_Key: hud.speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44223592144896
+    m_Key: hud.start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1235738435584
+    m_Key: menu.exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1231648989184
+    m_Key: menu.info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1224384454656
+    m_Key: menu.play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38164978737152
+    m_Key: pause.exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1240926789632
+    m_Key: pause.resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1238351486976
+    m_Key: pause.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86233195749376
+    m_Key: gameOver.exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86319799738368
+    m_Key: gameOver.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86413081059328
+    m_Key: gameOver.highscore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86527799468032
+    m_Key: gameOver.score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97759034089472
+    m_Key: hud.warning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100852559781888
+    m_Key: info.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101734982623232
+    m_Key: info.howToPlay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101844554620928
+    m_Key: info.controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 394989817307136
+    m_Key: info.warning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395145040109568
+    m_Key: info.missile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395284098064384
+    m_Key: info.shoot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395473173094400
+    m_Key: info.yaw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395602378629120
+    m_Key: info.warp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 395753604259840
+    m_Key: info.pitch
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5358670354215862557
+  references:
+    version: 2
+    RefIds:
+    - rid: 5358670354215862557
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1786700901456
