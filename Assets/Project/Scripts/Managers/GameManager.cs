@@ -1,20 +1,23 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameEvent inGameOnly, uIOnly;
 
-    static GameManager Instance;
+    public static GameManager Instance;
 
-    InGameState InGame;
-    MainMenuState MainMenu;
-    PreparationState Preparation;
-    OnPauseState Pause;
-    GameOverState GameOver;
+    [HideInInspector, NonSerialized] public InGameState InGame;
+    [HideInInspector, NonSerialized] public MainMenuState MainMenu;
+    [HideInInspector, NonSerialized] public PreparationState Preparation;
+    [HideInInspector, NonSerialized] public OnPauseState Pause;
+    [HideInInspector, NonSerialized] public GameOverState GameOver;
 
-    IGameState previousState, currentState;
+    IGameState previousState;
 
-    private GameStateMachine _stateMachine = new GameStateMachine();
+    [HideInInspector] public IGameState currentState;
+
+    GameStateMachine stateMachine = new GameStateMachine();
 
     private void Awake()
     {
@@ -30,7 +33,7 @@ public class GameManager : MonoBehaviour
         }
         InGame = new InGameState(inGameOnly);
         MainMenu = new MainMenuState(uIOnly);
-        Preparation = new PreparationState();
+        Preparation = new PreparationState(inGameOnly);
         Pause = new OnPauseState(uIOnly);
         GameOver = new GameOverState(uIOnly);
     }
@@ -43,9 +46,15 @@ public class GameManager : MonoBehaviour
 
     public void OnGoToMainMenu() => SetGameState(MainMenu);
 
-    public void SetGameState(IGameState state)
+    public void OnPreparation() => SetGameState(Preparation);
+
+    public void OnPlaneAvailable() => SetGameState(InGame);
+
+    public void OnGameOver() => SetGameState(GameOver);
+
+    void SetGameState(IGameState state)
     {
-        _stateMachine.ChangeState(state);
+        stateMachine.ChangeState(state);
         previousState = currentState;
         currentState = state;
     }

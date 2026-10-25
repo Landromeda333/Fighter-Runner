@@ -69,28 +69,12 @@ public class Plane : MonoBehaviour
             main2 = engineParticles.main;
             main2.startLifetime = speed / 100;
         }
-
-        /*
-         * Activación de la alerta
-        if (transform.position.y <= floor.position.y + 8)
-        {
-            audioController.masterAudioSource[13].Play(); // Reproduce el sonido de motor si el avión está cerca del suelo
-            uIController.warningPullUp.enabled = true;    // Muestra la advertencia de "Pull Up" si el avión está cerca del suelo
-        }
-        else
-        {
-            audioController.masterAudioSource[13].Stop(); // Para el sonido de motor si el avión está cerca del suelo
-            uIController.warningPullUp.enabled = false;   // Muestra la advertencia de "Pull Up" si el avión está cerca del suelo
-        }
-        */
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Bullet"))
-        {
+        if (other.CompareTag("Obstacle"))
             playerCrashed.Raise();                          // Llama al método GameOver del UIManager cuando el jugador colisiona con algo
-        }
     }
 
     /* Métodos para Game Events */
@@ -113,10 +97,7 @@ public class Plane : MonoBehaviour
     }
 
     /* Animation Event */
-    public void TakenOffHandle()
-    {
-        takenOff = true;
-    }
+    public void TakenOffHandle() => takenOff = true;
 
     public void TurnOnEngines()
     {
@@ -124,6 +105,7 @@ public class Plane : MonoBehaviour
         {
             engine.SetActive(true);                             // Se activan los postquemadores
         }
+
         /*
          * Reproducción del sonido de los postquemadores en el momento del despegue
         audioController.masterAudioSource[1].clip = audioController.audioClipsAircraft[2]; // Clip de audio de postquemadores
@@ -140,6 +122,7 @@ public class Plane : MonoBehaviour
         maxX = 27f;
         minY = 0f;
         maxY = 27f;
+
         /*
          * Reproducción del sonido normal del avión al terminar el despegue
         audioController.musicAudioSource.Play();

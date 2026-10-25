@@ -1,7 +1,8 @@
 public class PreparationState : IGameState
 {
-    public void Enter()
-    {
+    GameEvent inGameOnly;
 
-    }
+    public PreparationState(GameEvent inGameOnlyRequest) => inGameOnly = inGameOnlyRequest;
+    
+    public void Enter() => inGameOnly.Raise();
 }

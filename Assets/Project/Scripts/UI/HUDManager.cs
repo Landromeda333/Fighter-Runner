@@ -1,20 +1,21 @@
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.UIElements.Experimental;
 
 public class HUDManager : MonoBehaviour
 {
-    [SerializeField] GameEvent startGameRequest;
+    [SerializeField] GameEvent startGameRequest, onPreparation;
 
     PanelRenderer panelRenderer;
 
-    VisualTreeAsset _cachedVisualTreeAsset;
-
-    Label _scoreText, _speedNumText, _timeText;
+    Label _scoreText, _speedNumText, _timeText, _warningText;
 
     Button _startButton;
 
     Image _crosshire1, _crosshire2, _crosshire3;
+
+    IVisualElementScheduledItem warningBlinking;
 
     //float blinkSpeed = 2f;
 
@@ -24,11 +25,14 @@ public class HUDManager : MonoBehaviour
 
     private void OnDisable() => panelRenderer.UnregisterUIReloadCallback(OnUIReload);
 
+    private void Start() => onPreparation.Raise();
+
     void OnUIReload(PanelRenderer panel, VisualElement root, int version)
     {
         _scoreText = root.Q<Label>("score-text");
         _speedNumText = root.Q<Label>("speedNum-text");
         _timeText = root.Q<Label>("time-text");
+        _warningText = root.Q<Label>("warning-text");
 
         _crosshire1 = root.Q<Image>("crosshair1-image");
         _crosshire2 = root.Q<Image>("crosshair2-image");
@@ -38,37 +42,9 @@ public class HUDManager : MonoBehaviour
         _startButton.RegisterCallback<ClickEvent>(StartGame);
     }
 
-    /*
-    private void Update()
-    {
-        
-        if (warningPullUp.enabled)
-        {
-            float alpha = Mathf.PingPong(Time.time * blinkSpeed, 1f);
-            warningPullUp.color = new Color(warningPullUp.color.r, warningPullUp.color.g, warningPullUp.color.b, alpha);
-        }
-    }
-    */
+    public void Open() => panelRenderer.enabled = true;
 
-    public void Open()
-    {
-        if (panelRenderer.TryGetComponent<UIDocument>(out UIDocument doc))
-        {
-            if (doc.visualTreeAsset == null)
-                doc.visualTreeAsset = _cachedVisualTreeAsset;
-        }
-        panelRenderer.enabled = true;
-    }
-
-    public void Close()
-    {
-        panelRenderer.enabled = false;
-        if (panelRenderer.TryGetComponent<UIDocument>(out UIDocument doc))
-        {
-            _cachedVisualTreeAsset = doc.visualTreeAsset;
-            doc.visualTreeAsset = null;
-        }
-    }
+    public void Close() => panelRenderer.enabled = false;
 
     // Empezar el juego
     public void StartGame(ClickEvent evt)
@@ -109,5 +85,24 @@ public class HUDManager : MonoBehaviour
                 _crosshire3.style.display = DisplayStyle.Flex;
                 break;
         }
+    }
+
+    // Comienza el parapadeo del subtítulo
+    public void StartBlink()
+    {
+        _warningText.style.display = DisplayStyle.Flex;
+        warningBlinking = _warningText.schedule.Execute(() =>
+        {
+            _warningText.style.opacity = Mathf.PingPong(Time.time, 1);
+        }).Every(16);
+    }
+
+    public void StopBlink()
+    {
+        warningBlinking?.Pause();
+        _warningText.experimental.animation.Start(_warningText.style.opacity.value, 0, 1000, (e, val) =>
+        {
+            _warningText.style.opacity = val;
+        }).Ease(Easing.OutCubic).OnCompleted(()=> _warningText.style.display = DisplayStyle.None);
     }
 }

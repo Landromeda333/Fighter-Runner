@@ -7,8 +7,6 @@ public class PauseUIManager : MonoBehaviour
 
     PanelRenderer panelRenderer;
 
-    VisualTreeAsset _cachedVisualTreeAsset;
-
     private void Awake() => panelRenderer = GetComponent<PanelRenderer>();
 
     private void OnEnable() => panelRenderer.RegisterUIReloadCallback(OnUIReload);
@@ -20,25 +18,9 @@ public class PauseUIManager : MonoBehaviour
 
     }
 
-    public void Open()
-    {
-        if (panelRenderer.TryGetComponent<UIDocument>(out UIDocument doc))
-        {
-            if (doc.visualTreeAsset == null)
-                doc.visualTreeAsset = _cachedVisualTreeAsset;
-        }
-        panelRenderer.enabled = true;
-    }
+    public void Open() => panelRenderer.enabled = true;
 
-    public void Close()
-    {
-        panelRenderer.enabled = false;
-        if (panelRenderer.TryGetComponent<UIDocument>(out UIDocument doc))
-        {
-            _cachedVisualTreeAsset = doc.visualTreeAsset;
-            doc.visualTreeAsset = null;
-        }
-    }
+    public void Close() => panelRenderer.enabled = false;
 
     // Menú de configuración desde el menú de pausa en partida
     public void BtnPauseSettings() => onSettingsRequest.Raise();

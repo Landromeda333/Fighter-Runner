@@ -8,10 +8,10 @@ public class LevelManager : MonoBehaviour
 
     ParticleSystem speedParticles;                              // Partículas de velocidad
 
-    float timePlayed;                  //
+    float timePlayed;                                           //
 
     [HideInInspector] public int score;                         // Puntuación del jugador
-    [HideInInspector] public int lastWholeSecond = -1;                                   //
+    [HideInInspector] public int lastWholeSecond = -1;          //
 
     private void Awake()
     {
@@ -43,20 +43,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void OnPause()
-    {
-        Time.timeScale = 0;                                     // Se para el tiempo del juego
-    }
+    public void OnPause() => Time.timeScale = 0;                                     // Se para el tiempo del juego
 
-    public void OnContinueGame()
-    {
-        Time.timeScale = 1;
-    }
+    public void OnContinueGame() => Time.timeScale = 1;
 
-    public void OnEndGame()
-    {
-        enabled = false;
-    }
+    public void OnEndGame() => enabled = false;
 
     public void OnSpeedChanged()
     {
@@ -71,8 +62,5 @@ public class LevelManager : MonoBehaviour
         onScoreChanged.Raise(score);
     }
 
-    public void PlayerCrashHandle()
-    {
-        gameOver.Raise(score, lastWholeSecond);
-    }
+    public void PlayerCrashHandle() => gameOver.Raise(score, lastWholeSecond);
 }

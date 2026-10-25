@@ -23,10 +23,7 @@ public class PlaneAttack : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    private void Start()
-    {
-        missilesCache = missiles.Select(go => go.GetComponent<IUsable>()).Where(m => m != null).ToArray();
-    }
+    private void Start() => missilesCache = missiles.Select(go => go.GetComponent<IUsable>()).Where(m => m != null).ToArray();
 
     public void LaunchMissile()
     {
@@ -39,9 +36,7 @@ public class PlaneAttack : MonoBehaviour
         if (status == 1)
         {
             if (shootCoroutine == null)
-            {
                 shootCoroutine = StartCoroutine(Fire());          // Para no tener problemas de superposición de corrutinas se le asigna una corrutina a la variable para que se pueda detener
-            }
         }
         else if (shootCoroutine != null)
         {
@@ -70,16 +65,11 @@ public class PlaneAttack : MonoBehaviour
         }
     }
 
-    public void OnPause()
-    {
-        source.Pause();
-    }
+    public void OnPause() => source.Pause();
 
     public void OnContinueGame()
     {
         if (shootStarted)              // Si el jugador estaba disparando, reanudar el sonido del disparo
-        {
             source.Play();
-        }
     }
 }

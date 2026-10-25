@@ -6,6 +6,7 @@ public class MainMenuUIManager : MonoBehaviour
 {
     [SerializeField] StringGameEvent loadLvlRequest;
     [SerializeField] GameEvent settingsRequest, onInfoRequest;
+    [SerializeField] GameEvent onMainMenuLoaded;
 
     PanelRenderer panelRenderer;
 
@@ -20,6 +21,8 @@ public class MainMenuUIManager : MonoBehaviour
     private void OnEnable() => panelRenderer.RegisterUIReloadCallback(OnUIReload);
 
     private void OnDisable() => panelRenderer.RegisterUIReloadCallback(OnUIReload);
+
+    private void Start() => onMainMenuLoaded.Raise();
 
     void OnUIReload(PanelRenderer panel, VisualElement root, int version)
     {
